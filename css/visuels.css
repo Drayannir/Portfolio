@@ -1,0 +1,345 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0.7em;
+}
+::-webkit-scrollbar-track {
+    background-color: RGBa(255,255,255,0.2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+html,body{
+    font-size:16px;
+    font-family: 'Dancing Script', cursive;
+    font-family: "Roboto", sans-serif;
+    background-color: RGB(20,20,20);
+    color:azure;
+    scroll-behavior:smooth;
+    height:100vh;
+}
+strong{
+    font-style:normal;
+    font-size:1em;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    height:3.5em;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    color:azure;
+    text-transform: uppercase;
+    font-size:1.3em;
+    position:fixed;
+    width:100%;
+    top:0%;
+    align-items:center;
+    z-index: 2;
+}
+.burger-icon{
+    display:none;
+}
+.sidenav{
+    width: 100%;
+    position: fixed;
+    top:-10em;
+    z-index: 3;
+    background-color:rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: top 0.5s ease;
+    justify-content:center;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    text-decoration:none;
+    align-items:center;
+    font-size: 2em;
+    color: azure;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav ul {
+    list-style-type: none;
+    text-transform:uppercase;
+    padding: 0;
+    margin: 0;
+    width:100%;
+  }
+  .liens{
+    display:flex;
+    justify-content:center;
+    padding:0.3em 0.3em;
+    border:1px solid RGBa(240,255,255,0.1);
+  }
+  /* Active class */
+  .sidenav.active {
+    top:4.5em;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: -1.2em;
+    right: 0.5em;
+    font-size: 3em;
+  }
+  
+  /* Icône burger */
+  #openBtn{
+    display:contents;
+  }
+  .burger-icon{
+    margin-right:1em;
+  }
+  .burger-icon span {
+    display: block;
+    width: 1.8em;
+    height: 0.25em;
+    background-color: azure;
+    border-radius:0.25em;
+    margin: 4px 0;
+  }
+
+#NOM,#NOM a{
+    padding-left:0.5em;
+    text-decoration: none;
+    color:azure;
+}
+
+#NOM > a::after{
+    display:block;
+    content:"";
+    margin-left:0.5em;
+    padding-left:0.6em;
+    width:0%;
+    height:.2em;
+    background: linear-gradient(90deg, rgba(240,29,57,1) 0%, rgba(120,9,121,1) 48%, rgba(0,249,255,1) 100%);
+    transition:width .6s;
+}
+#NOM:hover > a::after{
+    background: linear-gradient(90deg, rgba(240,29,57,1) 0%, rgba(120,9,121,1) 48%, rgba(0,249,255,1) 100%);
+    width:95%;
+}
+
+.barre{
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+nav ul{
+    list-style-type:none;
+    padding-right:1.1em;
+}
+.section{
+    display:inline-block;
+    font-size:1em;
+}
+.section a{
+    text-decoration:none;
+    color:azure;
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    transition: .6s;
+}
+
+.section a:hover{
+    background-color:RGBa(255,255,255,0.3);
+    transition: 0.5s;
+}
+
+#first{
+    margin-top: 4.5em;
+}
+ /*BLOC DROITE*/
+
+ .bloc_presentation{
+    box-sizing: content-box;
+    display:flex;
+    width:100%;
+    height:auto;
+    margin-bottom:1em;
+    
+ }
+
+ .image{
+    width:55%;
+    height:90vh;
+    border:1px azure solid;
+ }
+ .image img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    object-position:center;
+ }
+
+ .texte
+ {
+    display:flex;
+    width:45%;
+    padding-top:10%;
+    padding-left:3em;
+    padding-right:3em;
+    border:1px azure solid;
+    background-color: azure;
+    color:black;
+
+ }
+.texte p{
+    display:block;
+    width:100%;
+    font-family:Dancing Script;
+    font-size:2em;
+    text-align: center;
+ }
+ .titre{
+    display:flex;
+    font-size:2em;
+    justify-content:center;
+ }
+ .presentation{
+    display:block;
+    width:100%;
+    font-family: Roboto;
+    text-align: center;
+
+}
+
+/*BLOC GAUCHE*/
+
+.bloc_presentation_2{
+    box-sizing: content-box;
+    display:flex;
+    width:100%;
+    height:auto;
+    margin-bottom:1em;
+ }
+
+ .image_2{
+    width:55%;
+    height:90vh;
+    border:1px azure solid;
+ }
+ .image_2 img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    object-position:center;
+ }
+
+ .texte_2
+ {
+    display:flex;
+    width:45%;
+    padding-top:10%;
+    padding-left:3em;
+    padding-right:3em;
+    border:1px azure solid;
+    background-color: azure;
+    color:black;
+
+ }
+.texte_2 p{
+    display:block;
+    width:100%;
+    font-family:Dancing Script;
+    font-size:2em;
+    text-align: center;
+ }
+ .titre_2{
+    display:flex;
+    font-size:2em;
+    justify-content:center;
+ }
+ .presentation_2{
+    display:block;
+    width:100%;
+    font-family: Roboto;
+    text-align: center;
+ }
+
+
+
+@media screen and (max-width: 900px) {
+
+    html,body{
+        font-size:12px;}
+    nav{
+        width:100%;
+        font-size:2em;
+        height:2.5em;
+        padding-right:0;
+        margin-right:0;
+    }
+    #navigation{display:none;}
+    .burger-icon{display:block;}
+    .bloc_presentation{
+        flex-wrap:wrap;
+        justify-content: center;
+        width:100%;
+        height:auto;       
+    }
+    .image{
+        width:100%;
+        height:50%;
+        padding-left: 0;
+    }
+    .texte
+    {
+        width:100%;
+        height:50%;
+    }
+    .texte p{
+        padding-bottom:2em;
+        font-size: 1.5em;
+    }
+    .bloc_presentation_2{
+        flex-wrap:wrap-reverse;
+        justify-content: center;
+        width:100%;
+        height:auto;
+    }
+    .image_2{
+        width:auto;
+        height:50%;
+        padding-right: 0;
+    }
+    .texte_2{
+        width:100%;
+        height:50%;
+
+    }
+    .texte_2 p{
+        padding-bottom:2em;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    html,body{
+        font-size:10px;
+    }
+    nav{
+        font-size:1.5em;
+    }
+    .sidenav.active{
+        top:3.8em;
+    }
+}
